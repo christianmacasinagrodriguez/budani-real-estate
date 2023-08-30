@@ -1,10 +1,9 @@
-import Navbar from '@/components/Navbar'
+
 import React from 'react'
 
 function Hero() {
   return (
-    <section className='h-screen bg-gradient-to-r from-black to-gray-500 w-screen bg-opacity-50'>
-        <Navbar />
+    <section className='h-screen bg-[url("https://images.pexels.com/photos/65781/pexels-photo-65781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")] bg-no-repeat bg-cover w-screen bg-opacity-10'>
 
     </section>
   )
