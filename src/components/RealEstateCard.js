@@ -1,0 +1,28 @@
+import React from 'react'
+import { Manrope } from 'next/font/google'
+
+const manrope = Manrope({subsets: ['latin']})
+
+function RealEstateCard() {
+  return (
+    <div className={`w-fit h-fit relative font-${manrope.className}` }>
+        <img className='w-[366px] h-[400px] object-cover object-center rounded-[20px]' src='https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Mixtownia-image'>
+        </img>
+        <div className='rounded-[20px] bg-white flex flex-row absolute inset-x-[5%] bottom-0 -mb-[50px] justify-evenly items-center p-5'>
+            <div>
+                <h2 className='text-2xl font-bold leading-[180%] text-[#3C414E'>
+                    Mixtownia   
+                </h2>
+                <p className='text-xl font-extrabold leading-[180%] text-[#6663E8]'>
+                    $205,500
+                </p>
+            </div>
+            <button className='w-[114px] h-[52px] rounded-[30px] font-extrabold leading-[180%] text-sm text-[#fff] bg-[#6663E9]'>Detail</button>
+
+
+        </div>
+    </div>
+  )
+}
+
+export default RealEstateCard

@@ -6,7 +6,7 @@ const manrope = Manrope({subsets: ['latin']})
 
 function Logo() {
   return (
-    <div className='flex items-center cursor-pointer'>
+    <div className='flex items-center cursor-pointer w-full'>
             <div className={`font-${nunito_sans.className} font-bold font-white bg-[#6663E9] w-[53px] h-[53px] flex justify-center items-center rounded-full italic text-2xl`}>
                 B
             </div>
