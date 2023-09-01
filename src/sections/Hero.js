@@ -6,12 +6,12 @@ const manrope = Manrope({subsets: ['latin']})
 
 function Hero() {
   return (
-    <section className='h-fit w-screen relative flex flex-row justify-start items-center   overflow-hidden box-border pb-[100px]'>     
-      <img className='w-screen h-screen absolute inset-0  object-cover object-center z-[-5]' src='https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='hero-image'></img>
-      <div className='h-screen w-screen absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A] z-[-4]'>
+    <section className='h-fit w-screen relative flex flex-row justify-start items-center bg-[#F6F8FA]  overflow-hidden box-border pb-[100px]'>     
+      <img className='w-screen h-screen absolute inset-0  object-cover object-center' src='https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='hero-image'></img>
+      <div className='h-screen w-screen absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A]'>
       </div>
       
-      <div className={`h-screen w-100% font-${manrope.className} flex flex-col  justify-center gap-y-6 px-[5%] mx-[5%]`}>
+      <div className={`h-screen w-100% font-${manrope.className} flex flex-col  justify-center gap-y-6 px-[5%] mx-[5%] z-[1]`}>
         <h1 className='flex flex-col text-white font-extrabold text-7xl w-full md:w-[60%] lg:w-[60%] leading-[115%] tracking-[0.72px]'>
           Home That Makes You Living Life!   
           </h1>
