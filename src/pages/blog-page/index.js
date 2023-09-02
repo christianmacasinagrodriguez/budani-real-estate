@@ -1,12 +1,55 @@
-import React from 'react'
+import BlogCard from '@/components/BlogCard'
+import Navbar from '@/components/Navbar'
+import Footer from '@/sections/Footer'
+import React, { useEffect, useState } from 'react'
 
-function blogPage() {
+
+function getBlogData() {
+  const [data, setData] = useState([]);
+  function getLocalStorageData() {
+   
+    return JSON.parse(localStorage.getItem('blogs'))
+  }
+
+  function parseDate(date) {
+    const date_arr = date.split('-')
+    return date_arr[1] + '-' + date_arr[2].substring(0, 2) + '-' + date_arr[0]
+  }
+
+  useEffect(() => {
+    const getBlogDataFromWP = async () => {
+      const res = await fetch(
+        'http://chriscosmos-real-state.local/wp-json/wp/v2/posts?_embed'
+      );
+      const resJson = await res.json();
+      setData(resJson)
+      localStorage.setItem('blogs', JSON.stringify(resJson))
+    };
+
+    if(getLocalStorageData()) {
+      setData(getLocalStorageData())
+    } else {
+      getBlogDataFromWP();
+    }
+    console.log(getLocalStorageData())
+    
+  }, []);
+
   return (
-    <main className='h-screen w-screen'>
-        Blogs
+    <div className='bg-[#F6F8FA]'>
+      <Navbar />
+      <main className='h-fit w-screen pt-[200px] px-[10%] md:px-[10%] lg:px-[10%] 2xl:px-[20%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]'>
+        {data?.map(datus => 
+        (   
+          <BlogCard key={datus.id} imageSRC={ "datus._embedded['wp:featuredmedia']['0'].source_url } postDate={parseDate(datus.date)"} blogTitle={datus.title.rendered}/>
+        ))}
         
-    </main>
+        
+        
+      </main>
+      <Footer />
+    </div>
+    
   )
 }
-
-export default blogPage
+export default getBlogData

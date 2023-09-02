@@ -3,11 +3,12 @@ import { Manrope } from 'next/font/google'
 import BottomLogo from '@/components/BottomLogo'
 
 const manrope = Manrope({subsets: ['latin']})
+//https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 
 function Hero() {
   return (
     <section className='h-fit w-screen relative flex flex-row justify-start items-center bg-[#F6F8FA]  overflow-hidden box-border pb-[100px]'>     
-      <img className='w-screen h-screen absolute inset-0  object-cover object-center' src='https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='hero-image'></img>
+      <img className='w-screen h-screen absolute inset-0  object-cover object-center' src='https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80' alt='hero-image'></img>
       <div className='h-screen w-screen absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A]'>
       </div>
       
