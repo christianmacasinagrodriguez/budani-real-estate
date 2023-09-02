@@ -2,16 +2,15 @@ import React from 'react'
 import { Manrope } from 'next/font/google'
 import Logo from './Logo'
 
-
-
-
 const manrope = Manrope({subsets: ['latin']})
 
 function Navbar() {
   return (
     <nav className='fixed top-0 inset-x-0 py-[30px] text-white flex flex-row justify-between mx-[5%] px-0 md:px-[5%] lg:px-[5%] xl:px-[5%] border-b-[1px] border-white border-opacity-50 z-20'>
-        <Logo bColor='text-white' nameColor='text-white' />
-        <ul className={`hidden md:flex lg:flex xl:flex flex-row justify-between items-center  ${manrope.className}`}>
+        <div className='w-full'>
+          <Logo bColor='text-white' nameColor='text-white' />
+        </div>
+        <ul className={`w-full hidden md:flex lg:flex xl:flex flex-row justify-between items-center  ${manrope.className}`}>
             <li ><a href='#'>Location</a></li>
             <li ><a href='#'>Blogs</a></li>
             <li ><a href='#'>Testimonials</a></li>
