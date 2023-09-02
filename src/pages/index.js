@@ -19,7 +19,6 @@ export default function Home() {
       <main
       className={` ${manrope.className}`}
       >
-
         <Hero />
         <RealEstates />
         <Features />
@@ -32,3 +31,4 @@ export default function Home() {
     
   )
 }
+
