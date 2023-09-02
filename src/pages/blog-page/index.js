@@ -37,7 +37,7 @@ function getBlogData() {
 
   return (
     <div className='bg-[#F6F8FA]'>
-      <Navbar />
+      <Navbar pageStat={false} />
       <main className='h-fit w-screen pt-[200px] px-[10%] md:px-[10%] lg:px-[10%] 2xl:px-[20%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]'>
         {data?.map(datus => 
         (   

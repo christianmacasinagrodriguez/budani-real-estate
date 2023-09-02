@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className='overflow-y-auto'>
 
-      <Navbar />
+      <Navbar pageStat={true}/>
 
       <main
       className={` ${manrope.className}`}

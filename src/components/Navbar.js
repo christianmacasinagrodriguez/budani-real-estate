@@ -1,14 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Manrope } from 'next/font/google'
 import Logo from './Logo'
 
 const manrope = Manrope({subsets: ['latin']})
 
-function Navbar() {
+function Navbar( { pageStat }) {
+
+  const [bg_view, setBgView] = useState('')
+  useEffect(() => {
+    if(pageStat){
+      window.addEventListener('scroll', ()=> {
+        console.log(window.scrollY)
+        if(window.scrollY > 800) {
+          setBgView('')
+        } else {
+          setBgView('hidden')
+        }
+      })
+
+    }
+    
+  })
+  
   return (
     <nav className='fixed top-0 inset-x-0 py-[30px] text-white flex flex-row justify-between mx-[5%] px-0 md:px-[5%] lg:px-[5%] xl:px-[5%] border-b-[1px] border-white border-opacity-50 z-20'>
-      <img className='absolute inset-0 object-cover w-full h-full z-[-5]' src='https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg'/>
-      <div className='h-full w-full absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A] z-[-2]'></div>
+      <img className={`${bg_view} absolute inset-0 object-cover w-full h-full z-[-5]`} src='https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg'/>
+      <div className={`${bg_view} h-full w-full absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A] z-[-2]`}></div>
         <div className='w-full'>
           <Logo bColor='text-white' nameColor='text-white' />
         </div>
