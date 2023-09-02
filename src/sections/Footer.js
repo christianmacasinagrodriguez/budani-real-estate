@@ -6,7 +6,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 function Footer() {
   return (
-    <footer className="w-screen h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[65px] py-[200px] px-[5%]">
+    <footer className="w-screen h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[65px] py-[200px] px-[5%] bg-white">
       <div className="w-full">
         <Logo bColor='text-white' nameColor='text-[#3C414E]'/>
         <p

@@ -5,7 +5,7 @@ import React from 'react'
 
 function BlogCard({ imageSRC, postDate, blogTitle }) {
   return (
-    <div className='w-fit h-fit flex flex-col bg-white'>
+    <div className='w-fit h-fit flex flex-col bg-white hover:-translate-y-2 transition-all duration-500'>
         <div className='w-full md:w-[385px] lg:w-[385px] h-[230px]'>
             <img className='w-full h-full object-cover object-center' src={ imageSRC } alt='blog-image' />
         </div>
