@@ -16,7 +16,7 @@ function Hero() {
           Home That Makes You Living Life!   
           </h1>
         <p className='text-white text-opacity-80 font-medium w-100% md:w-[35%] lg:w-[35%] leading-[170%]'>Are you looking for amazing Real estate? Don’t worry! We got it for you!</p>
-        <button className='text-white font-extrabold w-full md:w-[201px] lg:w-[201px] h-[62px] bg-[#6663E9] rounded-full'>Learn More</button>
+        <button className='text-white font-extrabold w-full md:w-[201px] lg:w-[201px] h-[62px] bg-[#6663E9] rounded-full drop-shadow-[0px_4px_60px_rgba(0, 0, 0, 0.05)]'>Learn More</button>
       </div>
       <BottomLogo />
      

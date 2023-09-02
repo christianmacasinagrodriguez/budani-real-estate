@@ -5,7 +5,7 @@ const manrope = Manrope({subsets: ['latin']})
 
 function NewsLetterCTA() {
   return (
-    <div className={`h-fit w-[90%] md:w-[80%] lg:w-[90%] xl:w-[80%] bg-[#6663E9] flex flex-col font-${manrope.className} items-center rounded-[70px] p-[80px]`}>
+    <div className={`h-fit w-[90%] md:w-[80%] lg:w-[90%] xl:w-[80%] bg-[#6663E9] flex flex-col font-${manrope.className} items-center rounded-[70px] p-[80px] shadow-[0px_4px_60px_rgba(0, 0, 0, 0.05)]`}>
         <h1 className='w-full md:w-full lg:w-full xl:w-[70%] text-white text-6xl font-extrabold leading-[135%] flex flex-col text-center mb-[30px]'>
             Subscribe to Our Newsletter For Weekly Article Update.
       
@@ -19,9 +19,9 @@ function NewsLetterCTA() {
                     <path d="M4.5 4.5H22.5C23.7375 4.5 24.75 5.5125 24.75 6.75V20.25C24.75 21.4875 23.7375 22.5 22.5 22.5H4.5C3.2625 22.5 2.25 21.4875 2.25 20.25V6.75C2.25 5.5125 3.2625 4.5 4.5 4.5Z" stroke="white" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M24.75 6.75L13.5 14.625L2.25 6.75" stroke="white" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <input className='w-full ml-[70px]  bg-transparent' type='email' placeholder='Enter your e-mail address'/>
+                <input className='w-full ml-[70px] pl-[20px] rounded-r-[40px] bg-transparent' type='email' placeholder='Enter your e-mail address'/>
             </label>       
-            <button className='w-full md:w-[174px] lg:w-[174px] h-[61px]  bg-white text-[#6663E9] text-lg font-extrabold leading-[180%] rounded-[40px]'>Subscribe</button>
+            <button className='w-full md:w-[174px] lg:w-[174px] h-[61px]  bg-white text-[#6663E9] text-lg font-extrabold leading-[180%] rounded-[40px] shadow-[0px_4px_60px_0px_rgba(0, 0, 0, 0.05)]'>Subscribe</button>
         </div>
         
     </div>
