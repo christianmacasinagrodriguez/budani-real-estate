@@ -5,7 +5,7 @@ const manrope = Manrope({subsets: ['latin']})
 
 function Feature() {
   return (
-    <div className={`font-${manrope.className} grid grid-rows-2 gap-y-[329px]`}>
+    <div className={`font-${manrope.className} grid grid-rows-2 gap-y-[200px]`}>
         <div className='h-fit w-screen grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-y-[137px]'>
             <div className='h-[257px] md:h-[456px] lg:h-[456px] w-[90%] bg-[#6663E9] rounded-r-[70px] flex flex-row justify-end items-end self-center order-2 md:order-2 lg:order-1 '>  
                 <div className='w-[292px] h-[292px] md:w-[518px] md:h-[518px] lg:w-[518px] lg:h-[518px] relative z-[1] mb-[67px]'>
