@@ -10,7 +10,6 @@ function Navbar( { pageStat }) {
   useEffect(() => {
     if(pageStat){
       window.addEventListener('scroll', ()=> {
-        console.log(window.scrollY)
         if(window.scrollY > 800) {
           setBgView('')
         } else {

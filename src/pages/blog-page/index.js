@@ -31,7 +31,6 @@ function getBlogData() {
     } else {
       getBlogDataFromWP();
     }
-    console.log(getLocalStorageData())
     
   }, []);
 
