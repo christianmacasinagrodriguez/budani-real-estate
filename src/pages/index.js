@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import RealEstates from '@/sections/RealEstates'
 import Features from '@/sections/Features'
 import Newsletter from '@/sections/Newsletter'
+import Footer from '@/sections/Footer'
 
 
 const manrope = Manrope({ subsets: ['latin'] })
@@ -24,6 +25,7 @@ export default function Home() {
         <Features />
         <Newsletter />   
       </main>
+      <Footer />
 
     </div>
 
