@@ -12,9 +12,9 @@ const manrope = Manrope({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='overflow-y-auto'>
+    <div className='overflow-y-auto overflow-x-hidden'>
 
-      <Navbar pageStat={true}/>
+      <Navbar pageStat={true} onBlogPage={false}/>
 
       <main
       className={` ${manrope.className}`}

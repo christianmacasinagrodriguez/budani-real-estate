@@ -4,9 +4,9 @@ import Logo from './Logo'
 
 const manrope = Manrope({subsets: ['latin']})
 
-function Navbar( { pageStat }) {
+function Navbar( { pageStat, onBlogPage }) {
 
-  const [bg_view, setBgView] = useState('')
+  const [bg_view, setBgView] = useState('hidden')
   useEffect(() => {
     if(pageStat){
       window.addEventListener('scroll', ()=> {
@@ -17,6 +17,9 @@ function Navbar( { pageStat }) {
         }
       })
 
+    }
+    if(onBlogPage){
+      setBgView('')
     }
     
   })

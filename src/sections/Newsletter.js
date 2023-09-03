@@ -3,7 +3,7 @@ import React from 'react'
 
 function Newsletter() {
   return (
-    <section className='w-screen h-fit grid place-items-center pt-[200px]'>
+    <section className='w-screen h-fit grid place-items-center pt-[200px] overflow-x-hidden'>
         <NewsLetterCTA />
         
     </section>
