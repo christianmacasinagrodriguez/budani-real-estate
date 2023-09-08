@@ -32,15 +32,16 @@ function getBlogData() {
       getBlogDataFromWP();
     }
     
+    
   }, []);
 
   return (
     <div className='bg-[#F6F8FA]'>
       <Navbar pageStat={false} onBlogPage={true}/>
-      <main className='h-fit w-screen pt-[200px] px-[10%] md:px-[10%] lg:px-[10%] 2xl:px-[20%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]'>
+      <main className='h-fit w-screen pt-[200px] px-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]'>
         {data?.map(datus => 
         (   
-          //<BlogCard key={datus.id} imageSRC={ datus._embedded['wp:featuredmedia']['0'].source_url } postDate={parseDate(datus.date)} blogTitle={datus.title.rendered}/>
+          <BlogCard key={datus.id} imageSRC={ datus._embedded['wp:featuredmedia']['0'].source_url } postDate={parseDate(datus.date)} blogTitle={datus.title.rendered} blogContent={ datus.content.rendered }/>
         ))}
         
         
