@@ -6,8 +6,16 @@ const manrope = Manrope({subsets: ['latin']})
 
 function Navbar( { pageStat, onBlogPage }) {
 
-  const [bg_view, setBgView] = useState('hidden')
+  const [bgView, setBgView] = useState('hidden')
+  const [navBehavior, setNavBehavior] = useState('fixed')
+  const [scrollData, setScrollData ] = useState(0)
+
   useEffect(() => {
+    setImageView()
+    setNavbarBehavior()
+    
+  })
+  function setImageView() {
     if(pageStat){
       window.addEventListener('scroll', ()=> {
         if(window.scrollY > 800) {
@@ -21,13 +29,29 @@ function Navbar( { pageStat, onBlogPage }) {
     if(onBlogPage){
       setBgView('')
     }
-    
-  })
+
+  }
+  function setNavbarBehavior(){
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', ()=> {
+      setScrollData(window.scrollY)
+  
+      if (window.scrollY > scrollData) {
+        setNavBehavior('hidden')
+     } else {
+        setNavBehavior('fixed')
+     } 
+     setScrollData(window.scrollY)
+     
+      
+    })
+
+  }
   
   return (
-    <nav className='fixed top-0 inset-x-0 py-[30px] text-white flex flex-row justify-between mx-[5%] px-0 md:px-[5%] lg:px-[5%] xl:px-[5%] border-b-[1px] border-white border-opacity-50 z-20'>
-      <img className={`${bg_view} absolute inset-0 object-cover w-full h-full z-[-5]`} src='https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg'/>
-      <div className={`${bg_view} h-full w-full absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A] z-[-2]`}></div>
+    <nav className={`${navBehavior} top-0 inset-x-0 py-[30px] text-white flex flex-row justify-between mx-[5%] px-0 md:px-[5%] lg:px-[5%] xl:px-[5%] border-b-[1px] border-white border-opacity-50 z-20`}>
+      <img className={`${bgView} absolute inset-0 object-cover w-full h-full z-[-5]`} src='https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80'/>
+      <div className={`${bgView} h-full w-full absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A] z-[-2]`}></div>
         <div className='w-full'>
           <Logo bColor='text-white' nameColor='text-white' />
         </div>

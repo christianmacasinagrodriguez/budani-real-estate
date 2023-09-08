@@ -31,7 +31,6 @@ function getBlogData() {
     } else {
       getBlogDataFromWP();
     }
-    console.log(data)
     
     
   }, []);
@@ -40,7 +39,6 @@ function getBlogData() {
     <div className='bg-[#F6F8FA]'>
       <Navbar pageStat={false} onBlogPage={true}/>
       <main className='h-fit w-screen pt-[200px] px-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]'>
-        {console.log(data)}
         {data?.map(datus => 
         (   
           <BlogCard key={datus.id} imageSRC={ datus._embedded['wp:featuredmedia']['0'].source_url } postDate={parseDate(datus.date)} blogTitle={datus.title.rendered} blogContent={ datus.content.rendered }/>

@@ -7,14 +7,13 @@ const manrope = Manrope({subsets: ['latin']})
 
 function Blog() {
     const [currentBlogData, setCurrentBlogData] = useState({})
+    
     useEffect( () => {
         setCurrentBlogData(JSON.parse(localStorage.getItem('blogData'))) 
+        
          
     }, [])
-    console.log(currentBlogData.blogContent)
-    // setContentArr(currentBlogData.blogContent.split('\n'))
-      
-  
+   
   return (
     <div className='w-screen h-fit bg-[#F6F8FA]'>
         <Navbar  pageStat={false} onBlogPage={true}/>
@@ -25,16 +24,11 @@ function Blog() {
                     {currentBlogData.blogTitle}
                 </h1>
                 <div className='flex flex-col gap-[24px]'>
-                {/* {contentArr.map( content => (
-                        <p className='text-lg text-black leading-[180%] px-[20%]'>
-                            { content }
-                        </p>
-                    ))}
-                    {((currentBlogData.blogContent.replaceAll('<p>','')).replaceAll('</p>', '')).split('\n').map( content => (
-                        <p className='text-lg text-black leading-[180%] px-[20%]'>
-                            { content }
-                        </p>
-                    ))} */}
+                    <p className='text-lg text-black leading-[180%] px-[20%]'>
+                        {currentBlogData.blogContent}
+                       
+                    </p>
+                   
                 </div>
                 
 

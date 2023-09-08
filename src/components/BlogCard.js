@@ -9,7 +9,7 @@ function BlogCard({ imageSRC, postDate, blogTitle, blogContent }) {
       imageSRC: imageSRC,
       postDate: postDate,
       blogTitle: blogTitle,
-      blogContent: blogContent
+      blogContent: blogContent.replaceAll('<p>', '').replaceAll('</p>', '').split('\n')
     }
     localStorage.removeItem('blogData')
     localStorage.setItem('blogData', JSON.stringify(blogObject))
