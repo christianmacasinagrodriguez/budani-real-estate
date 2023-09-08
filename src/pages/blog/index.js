@@ -16,7 +16,7 @@ function Blog() {
    
   return (
     <div className='w-screen h-fit bg-[#F6F8FA]'>
-        <Navbar  pageStat={false} onBlogPage={true}/>
+        <Navbar  pageStat={false} onBlogPage={true} blogActive={true} contactActive={false}/>
         <main className={`p-[200px] h-fit font-${manrope.className}`}>
             <section className='flex - flex-col gap-y-[48px]'>
                 <img className='w-full h-fit' src={`${currentBlogData.imageSRC}`}/>
