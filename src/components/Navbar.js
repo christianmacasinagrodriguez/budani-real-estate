@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Manrope } from 'next/font/google'
 import Logo from './Logo'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const manrope = Manrope({subsets: ['latin']})
 
@@ -58,9 +59,9 @@ function Navbar( { pageStat, onBlogPage, blogActive, contactActive}) {
         </div>
         <ul className={`w-fit hidden md:flex lg:flex xl:flex flex-row gap-2 justify-between items-center  ${manrope.className} `}>
             {/* <li><a href='/'>Location</a></li> */}
-            <li><a className={`h-full hover:border-b-4 hover:border-[#6663E9] hover:text-lg p-4 transition-all duration-[4000] ${blogActive ? 'text-lg border-b-4 border-[#6663E9]' : ''}`} href='blog-page'>Blogs</a></li>
+            <Link className={`h-full hover:border-b-4 hover:border-[#6663E9] hover:text-lg p-4 transition-all duration-[4000] ${blogActive ? 'text-lg border-b-4 border-[#6663E9]' : ''}`} href='blog-page'>Blogs</Link>
             {/* <li><a href='/'>Testimonials</a></li> */}
-            <li><a className={`h-full hover:border-b-4 hover:border-[#6663E9] hover:text-lg p-4 transition-all duration-[4000] ${contactActive ? 'text-lg border-b-4 border-[#6663E9]' : ''}`} href='contact-page'>Contact</a></li>
+            <Link className={`h-full hover:border-b-4 hover:border-[#6663E9] hover:text-lg p-4 transition-all duration-[4000] ${contactActive ? 'text-lg border-b-4 border-[#6663E9]' : ''}`} href='contact-page'>Contact</Link>
         </ul>
         <div className='flex justify-center items-center md:hidden lg:hidden xl:hidden text-3xl'>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
