@@ -2,6 +2,7 @@ import BlogCard from '@/components/BlogCard'
 import Navbar from '@/components/Navbar'
 import Footer from '@/sections/Footer'
 import React, { useEffect, useState } from 'react'
+import Head from 'next/head'
 
 
 function getBlogData() {
@@ -19,7 +20,7 @@ function getBlogData() {
   useEffect(() => {
     const getBlogDataFromWP = async () => {
       const res = await fetch(
-        'http://chriscosmos-real-state.local/wp-json/wp/v2/posts?_embed'
+        'https://dev-fortis-avia.pantheonsite.io/wp-json/wp/v2/posts?_embed'
       );
       const resJson = await res.json();
       setData(resJson)
@@ -36,9 +37,13 @@ function getBlogData() {
   }, []);
 
   return (
-    <div className='bg-[#F6F8FA]'>
+    <>
       <Navbar pageStat={false} onBlogPage={true} blogActive={true} contactActive={false}/>
-      <main className='h-fit w-screen pt-[200px] px-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]'>
+      <Head>
+        <title>Blogs</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <main className='h-fit w-screen pt-[200px] px-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] bg-gray-100'>
         {data?.map(datus => 
         (   
           <BlogCard key={datus.id} imageSRC={ datus._embedded['wp:featuredmedia']['0'].source_url } postDate={parseDate(datus.date)} blogTitle={datus.title.rendered} blogContent={ datus.content.rendered }/>
@@ -48,7 +53,7 @@ function getBlogData() {
         
       </main>
       <Footer />
-    </div>
+    </>
     
   )
 }
