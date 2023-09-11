@@ -3,6 +3,7 @@ import Footer from '@/sections/Footer'
 import React, { useEffect, useState } from 'react'
 import { Manrope } from 'next/font/google'
 import Head from 'next/head'
+import Image from 'next/image'
 
 const manrope = Manrope({subsets: ['latin']})
 
@@ -24,7 +25,7 @@ function Blog() {
       </Head>
         <main className={`w-screen bg-[#F6F8FA] p-[200px] h-fit font-${manrope.className}`}>
             <section className='flex - flex-col gap-y-[48px]'>
-                <img className='w-full h-fit' src={`${currentBlogData.imageSRC}`}/>
+                <Image className='w-full h-fit' src={`${currentBlogData.imageSRC}`}/>
                 <h1 className='text-6xl text-black px-[20%] leading-[120%]'>
                     {currentBlogData.blogTitle}
                 </h1>

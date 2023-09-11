@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 
 
-function getBlogData() {
+function GetBlogData() {
   const [data, setData] = useState([]);
   function getLocalStorageData() {
     // localStorage.removeItem('blogs')
@@ -26,12 +26,15 @@ function getBlogData() {
       setData(resJson)
       localStorage.setItem('blogs', JSON.stringify(resJson))
     };
+    console.log(getBlogDataFromWP())
+    getBlogDataFromWP()
+   
 
-    if(getLocalStorageData()) {
-      setData(getLocalStorageData())
-    } else {
-      getBlogDataFromWP();
-    }
+    // if(getBlogDataFromWP()) {
+    //   setData(getBlogDataFromWP())
+    // } else {
+    //   setData(getLocalStorageData())
+    // }
     
     
   }, []);
@@ -43,7 +46,7 @@ function getBlogData() {
         <title>Blogs</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className='h-fit w-screen pt-[200px] px-[10%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] bg-gray-100'>
+      <main className='h-fit w-screen pt-[200px] px-[10%] pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] bg-gray-100'>
         {data?.map(datus => 
         (   
           <BlogCard key={datus.id} imageSRC={ datus._embedded['wp:featuredmedia']['0'].source_url } postDate={parseDate(datus.date)} blogTitle={datus.title.rendered} blogContent={ datus.content.rendered }/>
@@ -57,4 +60,4 @@ function getBlogData() {
     
   )
 }
-export default getBlogData
+export default GetBlogData
