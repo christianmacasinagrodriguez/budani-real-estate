@@ -6,6 +6,7 @@ import RealEstates from '@/sections/RealEstates'
 import Features from '@/sections/Features'
 import Newsletter from '@/sections/Newsletter'
 import Footer from '@/sections/Footer'
+import Head from 'next/head'
 
 
 const manrope = Manrope({ subsets: ['latin'] })
@@ -15,6 +16,10 @@ export default function Home() {
     <div className='overflow-y-auto overflow-x-hidden'>
 
       <Navbar pageStat={true} onBlogPage={false} blogActive={false} contactActive={false}/>
+      <Head>
+        <title>Budani Real State</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
 
       <main
       className={` ${manrope.className}`}
