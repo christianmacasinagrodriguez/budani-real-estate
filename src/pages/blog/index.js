@@ -25,7 +25,7 @@ function Blog() {
       </Head>
         <main className={`w-screen bg-[#F6F8FA] p-[200px] h-fit font-${manrope.className}`}>
             <section className='flex - flex-col gap-y-[48px]'>
-                <Image className='w-full h-fit' src={`${currentBlogData.imageSRC}`}/>
+                <Image width='20000' height='20000' className='w-full h-fit' src={currentBlogData.imageSRC}/>
                 <h1 className='text-6xl text-black px-[20%] leading-[120%]'>
                     {currentBlogData.blogTitle}
                 </h1>

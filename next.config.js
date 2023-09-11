@@ -4,3 +4,8 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+module.exports = {
+  images: {
+      domains: ['images.unsplash.com', 'images.pexels.com', 'dev-fortis-avia.pantheonsite.io']
+  }
+}
