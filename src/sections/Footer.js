@@ -1,6 +1,7 @@
 import Logo from "@/components/Logo";
 import React from "react";
 import { Manrope } from "next/font/google";
+import Link from "next/link"
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -59,24 +60,24 @@ function Footer() {
       <div className={`w-full font-${manrope.className} text-[#27292E] grid grid-cols-2 gap-[57px] md:grid-cols-3 lg:grid-cols-3`}>
         <ul className='flex flex-col justify-evenly'>
             <h5 className='text-xl font-bold leading-[180%]'>Location</h5>
-            <li><a className='text-lg leading-[180%]' href="#">America</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Asia</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Europe</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Africa</a></li>
+            <Link className='text-lg leading-[180%]' href="#">America</Link>
+            <Link className='text-lg leading-[180%]' href="#">Asia</Link>
+            <Link className='text-lg leading-[180%]' href="#">Europe</Link>
+            <Link className='text-lg leading-[180%]' href="#">Africa</Link>
         </ul>
         <ul className='flex flex-col justify-evenly'>
             <h5 className='text-xl font-bold leading-[180%]'>Contact</h5>
-            <li><a className='text-lg leading-[180%]' href="#">About Me</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Teams</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Profile</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">FAQ</a></li>
+            <Link className='text-lg leading-[180%]' href="#">About Me</Link>
+            <Link className='text-lg leading-[180%]' href="#">Teams</Link>
+            <Link className='text-lg leading-[180%]' href="#">Profile</Link>
+            <Link className='text-lg leading-[180%]' href="#">FAQ</Link>
         </ul>
         <ul className='flex flex-col justify-evenly'>
             <h5 className='text-xl font-bold leading-[180%]'>Legals</h5>
-            <li><a className='text-lg leading-[180%]' href="#">Privacy</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Disclaimer</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Terms</a></li>
-            <li><a className='text-lg leading-[180%]' href="#">Company</a></li>
+            <Link className='text-lg leading-[180%]' href="#">Privacy</Link>
+            <Link className='text-lg leading-[180%]' href="#">Disclaimer</Link>
+            <Link className='text-lg leading-[180%]' href="#">Terms</Link>
+            <Link className='text-lg leading-[180%]' href="#">Company</Link>
         </ul>
       </div>
     </footer>
