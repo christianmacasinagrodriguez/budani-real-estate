@@ -1,7 +1,7 @@
 import Logo from "@/components/Logo";
 import React from "react";
 import { Manrope } from "next/font/google";
-import Link from "next/link"
+import Link from "next/link";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -60,24 +60,24 @@ function Footer() {
       <div className={`w-full font-${manrope.className} text-[#27292E] grid grid-cols-2 gap-[57px] md:grid-cols-3 lg:grid-cols-3`}>
         <ul className='flex flex-col justify-evenly'>
             <h5 className='text-xl font-bold leading-[180%]'>Location</h5>
-            <Link className='text-lg leading-[180%]' href="#">America</Link>
-            <Link className='text-lg leading-[180%]' href="#">Asia</Link>
-            <Link className='text-lg leading-[180%]' href="#">Europe</Link>
-            <Link className='text-lg leading-[180%]' href="#">Africa</Link>
+            <li><Link className='text-lg leading-[180%]' href="#">America</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Asia</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Europe</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Africa</Link></li>
         </ul>
         <ul className='flex flex-col justify-evenly'>
             <h5 className='text-xl font-bold leading-[180%]'>Contact</h5>
-            <Link className='text-lg leading-[180%]' href="#">About Me</Link>
-            <Link className='text-lg leading-[180%]' href="#">Teams</Link>
-            <Link className='text-lg leading-[180%]' href="#">Profile</Link>
-            <Link className='text-lg leading-[180%]' href="#">FAQ</Link>
+            <li><Link className='text-lg leading-[180%]' href="#">About Me</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Teams</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Profile</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">FAQ</Link></li>
         </ul>
         <ul className='flex flex-col justify-evenly'>
             <h5 className='text-xl font-bold leading-[180%]'>Legals</h5>
-            <Link className='text-lg leading-[180%]' href="#">Privacy</Link>
-            <Link className='text-lg leading-[180%]' href="#">Disclaimer</Link>
-            <Link className='text-lg leading-[180%]' href="#">Terms</Link>
-            <Link className='text-lg leading-[180%]' href="#">Company</Link>
+            <li><Link className='text-lg leading-[180%]' href="#">Privacy</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Disclaimer</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Terms</Link></li>
+            <li><Link className='text-lg leading-[180%]' href="#">Company</Link></li>
         </ul>
       </div>
     </footer>
