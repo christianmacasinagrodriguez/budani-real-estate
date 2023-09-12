@@ -26,7 +26,7 @@ function Hero( { blogData }) {
     })
     if(window.innerWidth < 768) {
       setOccurence(2)
-    } else if(window.innerWidth >= 768 && e.currentTarget.innerWidth < 1024) {
+    } else if(window.innerWidth >= 768 && window.innerWidth < 1024) {
       setOccurence(3)
     } else {
       setOccurence(5)
