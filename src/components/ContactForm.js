@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactForm() {
   return (
-    <form className="flex w-fit h-fit flex-col gap-2 shadow-[0_4px_40px_0_rgba(0,0,0,.15)] p-5">
+    <form className="flex w-fit h-fit flex-col gap-2 shadow-[0_4px_40px_0_rgba(0,0,0,.15)] p-5 text-[#27292E]">
       <fieldset className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-2 w-fit pb-4">
         <fieldset className='flex flex-col w-fit pb-2'>
             <label className="font-medium">First name*</label>

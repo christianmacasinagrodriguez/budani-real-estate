@@ -26,7 +26,7 @@ function Blog() {
         <main className={`w-screen bg-[#F6F8FA] px-[5%] md:px-[200px] lg:px-[200px] xl:px-[200px] py-[200px] h-fit font-${manrope.className}`}>
             <section className='flex - flex-col gap-y-[48px]'>
                 <Image width='20000' height='20000' className='w-full h-fit' src={currentBlogData.imageSRC} alt='blog-featured-image'/>
-                <h1 className='text-6xl text-black px-0 md:px-[20%] lg:px-[20%] xl:px-[20%] leading-[120%]'>
+                <h1 className='text-4xl text-black px-0 md:px-[20%] lg:px-[20%] xl:px-[20%] leading-[120%] text-center'>
                     {currentBlogData.blogTitle}
                 </h1>
                 <div className='flex flex-col gap-[24px]'>

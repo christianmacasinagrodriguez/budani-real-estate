@@ -15,7 +15,7 @@ function ContactPage() {
         <title>Contact Us</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-	<main className='bg-white h-fit w-screen px-[5%] md:px-[10%] lg:px-[20%]'>
+	<main className='bg-white h-fit w-screen px-[5%] md:px-[10%] lg:px-[20%] text-[#27292E]'>
         <section className={`w-full h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-10 gap-5 pt-[200px] ${manrope.className}`}>
 			<div className='px-2 flex flex-col gap-20' >
 				<h1 className='text-5xl'>Contact us</h1>
