@@ -18,7 +18,7 @@ function BlogCard({ imageSRC, postDate, blogTitle, blogContent }) {
   }
 
   return (
-    <div className='w-fit h-fit flex flex-col bg-white hover:-translate-y-1 transition-all duration-500'>
+    <div className='w-full md:w-fit lg:w-fit xl:w-fit h-fit flex flex-col bg-white hover:-translate-y-1 transition-all duration-500'>
         <div className='w-full md:w-[385px] lg:w-[385px] h-[230px]'>
             <Image width='20000' height='20000' className='w-full h-full object-cover object-center hover:brightness-110' src={ imageSRC } alt='blog-image' />
         </div>

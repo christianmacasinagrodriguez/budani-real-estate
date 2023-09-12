@@ -86,7 +86,7 @@ function Navbar( { pageStat, onBlogPage, blogActive, contactActive}) {
   
   return (
     <nav className={`${navBehavior} top-0 inset-x-0 py-[30px] text-white flex flex-row justify-between mx-[5%] px-0 md:px-[5%] lg:px-[5%] xl:px-[5%] border-b-[1px] border-white border-opacity-50 z-20`}>
-      <Image width='20000' height='20000' className={`${bgView} absolute inset-0 object-cover w-full h-full z-[-5]`} src='https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80'/>
+      <Image width='20000' height='20000' className={`${bgView} absolute inset-0 object-cover w-full h-full z-[-5]`} src='https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80' alt='nav-background-image'/>
       <div className={`${bgView} h-full w-full absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0000001A] z-[-2]`}></div>
         <div className='w-full'>
           <Logo bColor='text-white' nameColor='text-white' />

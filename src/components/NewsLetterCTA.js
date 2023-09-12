@@ -6,7 +6,7 @@ const manrope = Manrope({subsets: ['latin']})
 function NewsLetterCTA() {
   return (
     <div className={`h-fit w-[90%] md:w-[80%] lg:w-[90%] xl:w-[80%] bg-[#6663E9] flex flex-col font-${manrope.className} items-center rounded-[70px] py-[80px] px-[5%] md:px-[80px] lg:px-[80px] shadow-[0px_4px_60px_rgba(0, 0, 0, 0.05)]`}>
-        <h1 className='w-full md:w-full lg:w-full xl:w-[70%] text-white text-6xl font-extrabold leading-[135%] flex flex-col text-center mb-[30px]'>
+        <h1 className='w-full md:w-full lg:w-full xl:w-[70%] text-white text-4xl md:text-6xl lg:text-6xl xl:text-6xl font-extrabold leading-[135%] flex flex-col text-center mb-[30px]'>
             Subscribe to Our Newsletter For Weekly Article Update.
       
         </h1>
