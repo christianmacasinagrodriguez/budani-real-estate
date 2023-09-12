@@ -3,6 +3,7 @@ import React from 'react'
 import Logo from './Logo'
 
 function BottomLogo({ occurrence }) {
+  let id = 0
   const array = [...Array(occurrence)]
 
   return (
@@ -10,7 +11,7 @@ function BottomLogo({ occurrence }) {
       {console.log(occurrence)}
 
       {
-        array.map( ()=> <Logo bColor='text-white' nameColor='text-[#3C414E]'/>)  
+        array.map( ()=> <Logo key={id++} bColor='text-white' nameColor='text-[#3C414E]'/>)  
       }
         
 
