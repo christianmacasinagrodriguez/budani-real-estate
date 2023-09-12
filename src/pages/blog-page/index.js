@@ -26,7 +26,6 @@ function GetBlogData() {
       setData(resJson)
       localStorage.setItem('blogs', JSON.stringify(resJson))
     };
-    console.log(getBlogDataFromWP())
     getBlogDataFromWP()
    
 
