@@ -3,6 +3,7 @@ import { Manrope } from 'next/font/google'
 import Logo from './Logo'
 import Image from 'next/image'
 import Link from 'next/link'
+import Navigation from './Navigation'
 
 const manrope = Manrope({subsets: ['latin']})
 
@@ -11,6 +12,9 @@ function Navbar( { pageStat, onBlogPage, blogActive, contactActive}) {
   const [bgView, setBgView] = useState('hidden')
   const [navBehavior, setNavBehavior] = useState('fixed')
   const [scrollData, setScrollData ] = useState(0)
+  const [menuIcon, setMenuIcon] = useState('')
+  const [menuCloseIcon, setMenuCloseIcon] = useState('hidden')
+  const [mobileMenuVisibility, setMobileMenuVisibility] = useState('hidden')
 
   useEffect(() => {
     setImageView()
@@ -49,6 +53,36 @@ function Navbar( { pageStat, onBlogPage, blogActive, contactActive}) {
     })
 
   }
+
+  function menuClickHandler() {
+    changeMenuIcon()
+    toggleMobileMenu()
+
+  }
+
+  function changeMenuIcon() {
+    if(menuIcon === '') {
+      setMenuIcon('hidden')
+    } else {
+      setMenuIcon('')
+    }
+
+    if(menuCloseIcon === 'hidden') {
+      setMenuCloseIcon('')
+    } else {
+      setMenuCloseIcon('hidden')
+    }
+
+  }
+
+  function toggleMobileMenu() {
+    if(mobileMenuVisibility === 'hidden'){
+      setMobileMenuVisibility('flex')
+    } else {
+      setMobileMenuVisibility('hidden')
+    }
+    
+  }
   
   return (
     <nav className={`${navBehavior} top-0 inset-x-0 py-[30px] text-white flex flex-row justify-between mx-[5%] px-0 md:px-[5%] lg:px-[5%] xl:px-[5%] border-b-[1px] border-white border-opacity-50 z-20`}>
@@ -57,18 +91,15 @@ function Navbar( { pageStat, onBlogPage, blogActive, contactActive}) {
         <div className='w-full'>
           <Logo bColor='text-white' nameColor='text-white' />
         </div>
-        <ul className={`w-fit hidden md:flex lg:flex xl:flex flex-row gap-2 justify-between items-center  ${manrope.className} `}>
-            {/* <li><a href='/'>Location</a></li> */}
-            <Link className={`h-full hover:border-b-4 hover:border-[#6663E9] hover:text-lg p-4 transition-all duration-[4000] ${blogActive ? 'text-lg border-b-4 border-[#6663E9]' : ''}`} href='blog-page'>Blogs</Link>
-            {/* <li><a href='/'>Testimonials</a></li> */}
-            <Link className={`h-full hover:border-b-4 hover:border-[#6663E9] hover:text-lg p-4 transition-all duration-[4000] ${contactActive ? 'text-lg border-b-4 border-[#6663E9]' : ''}`} href='contact-page'>Contact</Link>
-        </ul>
-        <div className='flex justify-center items-center md:hidden lg:hidden xl:hidden text-3xl'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <Navigation blogActive={blogActive} contactActive={contactActive} visibility={mobileMenuVisibility} />
+        
+        <div className='flex justify-center items-center md:hidden lg:hidden xl:hidden text-3xl' onClick={menuClickHandler}>
+            <svg className={`${menuIcon}`} xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                 <path d="M25 7.5L12.5 7.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M25 15L5 15" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M25 22.5L17.5 22.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
+            <svg className={`${menuCloseIcon}`} xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><path d="M9.156 6.313 6.312 9.155 22.157 25 6.22 40.969 9.03 43.78 25 27.844 40.938 43.78l2.843-2.843L27.844 25 43.687 9.156l-2.843-2.844L25 22.157z" transform="scale(5.12)" fill="#fff" strokeMiterlimit="10" /></svg>
         </div>
 
     </nav>

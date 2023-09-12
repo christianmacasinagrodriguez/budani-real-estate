@@ -4,10 +4,10 @@ function ContactForm() {
   return (
     <form className="flex w-fit h-fit flex-col gap-2 shadow-[0_4px_40px_0_rgba(0,0,0,.15)] p-5">
       <fieldset className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-2 w-fit pb-4">
-        <fieldse className='flex flex-col w-fit pb-2'>
+        <fieldset className='flex flex-col w-fit pb-2'>
             <label className="font-medium">First name*</label>
             <input className="bg-gray-100 border border-[#dbd6ef] rounded-md p-4 font-medium hover:border-[#6663E9] focus:border-[#6663E9] focus:outline-none w-full" type="text" required/>
-        </fieldse>
+        </fieldset>
         <fieldset className='flex flex-col w-fit pb-2'>
             <label className="font-medium">Last name</label>
             <input  className="bg-gray-100 border border-[#dbd6ef] rounded-md p-4 font-medium hover:border-[#6663E9] focus:border-[#6663E9] focus:outline-none w-full" type="text" />
