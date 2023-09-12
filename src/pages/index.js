@@ -13,7 +13,7 @@ const manrope = Manrope({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='overflow-y-auto overflow-x-hidden'>
+    <div className='overflow-y-auto overflow-x-hidden bg-gray-100'>
 
       <Navbar pageStat={true} onBlogPage={false} blogActive={false} contactActive={false}/>
       <Head>
