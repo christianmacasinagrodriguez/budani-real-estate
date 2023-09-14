@@ -5,7 +5,6 @@ import { NextResponse } from "next/server";
 export default async function SendEmail(request) {
   try {
     const { firstName, lastName, email, message, subject } = await request.body;
-    console.log(request)
     
 
     let config = {
