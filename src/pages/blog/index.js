@@ -40,8 +40,8 @@ function Blog() {
                         loading ? <p>Loading...</p> : currentBlogData.blogContent.map(content => (
             
                             content === '' 
-                            ? (<p className='fixed'></p>)
-                            : (<p className='text-lg text-black leading-[180%] px-0 md:px-[20%] lg:px-[20%] xl:px-[20%]'>
+                            ? ''
+                            : (<p key={content} className='text-lg text-black leading-[180%] px-0 md:px-[20%] lg:px-[20%] xl:px-[20%]'>
                             {content}
                    
                         </p>)
