@@ -2,7 +2,7 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
-export default async function SendEmail(request) {
+export default async function POST(request) {
   try {
     const { firstName, lastName, email, message, subject } = await request.body;
     

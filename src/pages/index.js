@@ -15,11 +15,12 @@ export default function Home() {
   return (
     <div className='overflow-y-auto overflow-x-hidden bg-gray-100'>
 
-      <Navbar pageStat={true} onBlogPage={false} blogActive={false} contactActive={false}/>
+      
       <Head>
         <title>Budani Real State</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <Navbar pageStat={true} onBlogPage={false} blogActive={false} contactActive={false}/>
 
       <main
       className={` ${manrope.className}`}
