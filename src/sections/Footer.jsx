@@ -9,13 +9,13 @@ function Footer() {
   return (
     <footer className="w-screen h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[65px] py-[200px] px-[5%] bg-white overflow-x-hidden">
       <div className="w-full">
-        <Logo bColor='text-white' nameColor='text-[#3C414E]'/>
+        <Logo bColor="text-white" nameColor="text-[#3C414E]" />
         <p
           className={`w-[323px] text-[#27292E] font-${manrope.className} text-xl leading-[180%] mt-[26px] mb-[41px]`}
         >
           2021 Award winning Real estate and Lorem ipsum dolor sit amet
         </p>
-        <svg 
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           width="207"
           height="50"
@@ -57,27 +57,77 @@ function Footer() {
           />
         </svg>
       </div>
-      <div className={`w-full font-${manrope.className} text-[#27292E] grid grid-cols-2 gap-[57px] md:grid-cols-3 lg:grid-cols-3`}>
-        <ul className='flex flex-col justify-evenly'>
-            <h5 className='text-xl font-bold leading-[180%]'>Location</h5>
-            <li><Link className='text-lg leading-[180%]' href="#">America</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Asia</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Europe</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Africa</Link></li>
+      <div
+        className={`w-full font-${manrope.className} text-[#27292E] grid grid-cols-2 gap-[57px] md:grid-cols-3 lg:grid-cols-3`}
+      >
+        <ul className="flex flex-col justify-evenly">
+          <h5 className="text-xl font-bold leading-[180%]">Location</h5>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              America
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Asia
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Europe
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Africa
+            </Link>
+          </li>
         </ul>
-        <ul className='flex flex-col justify-evenly'>
-            <h5 className='text-xl font-bold leading-[180%]'>Contact</h5>
-            <li><Link className='text-lg leading-[180%]' href="#">About Me</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Teams</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Profile</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">FAQ</Link></li>
+        <ul className="flex flex-col justify-evenly">
+          <h5 className="text-xl font-bold leading-[180%]">Contact</h5>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              About Me
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Teams
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Profile
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              FAQ
+            </Link>
+          </li>
         </ul>
-        <ul className='flex flex-col justify-evenly'>
-            <h5 className='text-xl font-bold leading-[180%]'>Legals</h5>
-            <li><Link className='text-lg leading-[180%]' href="#">Privacy</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Disclaimer</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Terms</Link></li>
-            <li><Link className='text-lg leading-[180%]' href="#">Company</Link></li>
+        <ul className="flex flex-col justify-evenly">
+          <h5 className="text-xl font-bold leading-[180%]">Legals</h5>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Privacy
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Disclaimer
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Terms
+            </Link>
+          </li>
+          <li>
+            <Link className="text-lg leading-[180%]" href="#">
+              Company
+            </Link>
+          </li>
         </ul>
       </div>
     </footer>
