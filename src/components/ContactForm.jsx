@@ -9,9 +9,11 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [alertView, setAlertView] = useState("hidden");
+  const [sending, setSending] = useState(false);
 
   const sendMail = async (e) => {
     e.preventDefault();
+    setSending(true);
 
     const response = await fetch("/api/send-email/email", {
       method: "POST",
@@ -29,6 +31,7 @@ function ContactForm() {
     });
 
     if (response.status === 200) {
+      setSending(false);
       setAlertView("flex");
       setTimeout(() => {
         setAlertView("hidden");
@@ -38,6 +41,8 @@ function ContactForm() {
       setEmail("");
       setSubject("");
       setMessage("");
+    } else {
+      setSending(true);
     }
   };
 
@@ -123,7 +128,7 @@ function ContactForm() {
           type="submit"
           className="w-fit flex flex-start bg-[#6663E9] px-6 py-2 text-white font-bold rounded-md"
         >
-          Submit
+          {sending ? "Sending..." : "Submit"}
         </button>
       </form>
     </>

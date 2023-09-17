@@ -82,7 +82,7 @@ function Navbar({ pageStat, onBlogPage, blogActive, contactActive }) {
         width="20000"
         height="20000"
         className={`${bgView} absolute inset-0 object-cover w-full h-full z-[-5]`}
-        src="https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80"
+        src="https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="nav-background-image"
       />
       <div
