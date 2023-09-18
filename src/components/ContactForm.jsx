@@ -51,10 +51,10 @@ function ContactForm() {
       <SuccessAlert text="Successfully sent Email!" alertView={alertView} />
       <form
         onSubmit={sendMail}
-        className="flex w-fit h-fit flex-col gap-2 shadow-[0_4px_40px_0_rgba(0,0,0,.15)] p-5 text-[#27292E]"
+        className="flex w-full md:w-fit lg:w-fit xl:w-fit h-fit flex-col gap-2 shadow-[0_4px_40px_0_rgba(0,0,0,.15)] p-5 text-[#27292E]"
       >
-        <fieldset className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-2 w-fit pb-4">
-          <fieldset className="flex flex-col w-fit pb-2">
+        <fieldset className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-2 w-full pb-4">
+          <fieldset className="flex flex-col w-full pb-2">
             <label className="font-medium">First name*</label>
             <input
               className="bg-gray-100 border border-[#dbd6ef] rounded-md p-4 font-medium hover:border-[#6663E9] focus:border-[#6663E9] focus:outline-none w-full"
@@ -70,7 +70,7 @@ function ContactForm() {
               onInput={(e) => e.target.setCustomValidity("")}
             />
           </fieldset>
-          <fieldset className="flex flex-col w-fit pb-2">
+          <fieldset className="flex flex-col w-full pb-2">
             <label className="font-medium">Last name</label>
             <input
               className="bg-gray-100 border border-[#dbd6ef] rounded-md p-4 font-medium hover:border-[#6663E9] focus:border-[#6663E9] focus:outline-none w-full"
