@@ -2,9 +2,8 @@ import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import { Manrope } from "next/font/google";
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
-import SuccessAlert from "@/components/SuccessAlert";
 
 const manrope = Manrope({ subsets: ["latin"] });
 

@@ -27,6 +27,7 @@ function ContactForm() {
         email,
         subject,
         message,
+        type: "contact",
       }),
     });
 
@@ -48,7 +49,11 @@ function ContactForm() {
 
   return (
     <>
-      <SuccessAlert text="Successfully sent Email!" alertView={alertView} />
+      <SuccessAlert
+        heading="Email sent!"
+        text="We'll get back to you the soonest!"
+        alertView={alertView}
+      />
       <form
         onSubmit={sendMail}
         className="flex w-full md:w-fit lg:w-fit xl:w-fit h-fit flex-col gap-2 shadow-[0_4px_40px_0_rgba(0,0,0,.15)] p-5 text-[#27292E]"

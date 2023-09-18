@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Manrope } from "next/font/google";
 import Logo from "./Logo";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./Navigation";
-
-const manrope = Manrope({ subsets: ["latin"] });
 
 function Navbar({ pageStat, onBlogPage, blogActive, contactActive }) {
   const [bgView, setBgView] = useState("hidden");
