@@ -81,7 +81,7 @@ function NewsLetterCTA() {
               />
             </svg>
             <input
-              className="w-full ml-[70px] pl-[20px] rounded-r-[40px] bg-transparent focus:outline-none"
+              className="w-full ml-[70px] px-[20px] rounded-r-[40px] bg-transparent focus:outline-none"
               type="email"
               placeholder="Enter your e-mail address"
               required

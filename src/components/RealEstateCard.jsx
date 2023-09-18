@@ -36,7 +36,7 @@ function RealEstateCard({
           <div className="rounded-[20px] bg-white flex flex-row absolute inset-x-0 md:inset-x-[5%] lg:inset-x-[5%] bottom-0 -mb-0 md:-mb-[50px] lg:-mb-[50px] justify-evenly items-center p-5 shadow-lg">
             {/* shadow-[0px_4px_120px_0px_rgba(58, 86, 78, 0.20)] */}
             <div>
-              <h2 className="text-2xl font-bold leading-[180%] text-[#3C414E">
+              <h2 className="text-2xl font-bold leading-[180%] text-[#3C414E]">
                 {name}
               </h2>
               <p className="text-xl font-extrabold leading-[180%] text-[#6663E8] drop-shadow-[0px_4px_60px_rgba(0, 0, 0, 0.05)]">

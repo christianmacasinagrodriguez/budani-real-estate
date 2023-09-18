@@ -13,8 +13,8 @@ const SuccessAlert = ({ heading, text, alertView }) => {
         <div className=" absolute top-0 inset-x-0 mx-auto -mt-[60px]  p-5 bg-[#6663E9] w-fit h-fit flex flex-col justify-center items-center rounded-full text-white text-7xl">
           <FaCheck />
         </div>
-        <h1 className="font-bold text-2xl text-center">{heading}</h1>
-        <p className="text-center">{text}</p>
+        <h1 className="font-bold text-2xl text-center text-black">{heading}</h1>
+        <p className="text-center text-black">{text}</p>
       </div>
     </div>
   );
