@@ -61,8 +61,10 @@ function Navbar({ pageStat, onBlogPage, blogActive, contactActive }) {
 
     if (menuCloseIcon === "hidden") {
       setMenuCloseIcon("");
+      disableScroll();
     } else {
       setMenuCloseIcon("hidden");
+      enableScroll();
     }
   }
 
@@ -72,6 +74,18 @@ function Navbar({ pageStat, onBlogPage, blogActive, contactActive }) {
     } else {
       setMobileMenuVisibility("hidden");
     }
+  }
+
+  function disableScroll() {
+    let scrollTop = window.scrollY;
+    let scrollLeft = window.scrollX;
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+
+  function enableScroll() {
+    window.onscroll = function () {};
   }
 
   return (

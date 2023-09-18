@@ -111,7 +111,7 @@ function ContactForm() {
           }
           onInput={(e) => e.target.setCustomValidity("")}
         />
-        <label className="font-medium">What can we help you with?</label>
+        <label className="font-medium">What can we help you with?*</label>
         <textarea
           className="w-full bg-gray-100 border border-[#dbd6ef] rounded-md p-4 mb-4 font-medium hover:border-[#6663E9] focus:border-[#6663E9] focus:outline-none"
           placeholder="Tell us more details of your contact."
