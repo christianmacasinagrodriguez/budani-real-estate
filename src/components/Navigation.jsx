@@ -8,7 +8,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 function Navigation({ blogActive, contactActive, visibility }) {
   return (
     <ul
-      className={`w-screen md:w-fit lg:w-fit xl:w-fit fixed md:static lg:static xl:static top-[120px] bottom-0 right-0 left-0 ${visibility} md:flex lg:flex xl:flex flex-col md:flex-row  lg:flex-row xl:flex-row gap-2 justify-between items-center  ${manrope.className} bg-[#000000aa] md:bg-transparent lg:bg-transparent xl:bg-transparent py-[70%] md:py-0 lg:py-0 xl:py-0`}
+      className={`w-screen md:w-fit lg:w-fit xl:w-fit fixed md:static lg:static xl:static top-0 bottom-0 right-0 left-0 ${visibility} md:flex lg:flex xl:flex flex-col md:flex-row  lg:flex-row xl:flex-row gap-2 justify-between items-center  ${manrope.className} bg-[#000000e2] md:bg-transparent lg:bg-transparent xl:bg-transparent py-[70%] md:py-0 lg:py-0 xl:py-0 z-[-10] md:z-20 lg:z-20 xl:z-20`}
     >
       {/* <li><a href='/'>Location</a></li> */}
       <li>
