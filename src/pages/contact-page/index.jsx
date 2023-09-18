@@ -21,7 +21,7 @@ function ContactPage() {
         <title>Contact Us</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className="bg-white h-fit w-screen px-[1%] md:px-[10%] lg:px-[20%] text-[#27292E]">
+      <main className="bg-white h-fit w-screen px-0 md:px-[10%] lg:px-[20%] text-[#27292E]">
         <section
           className={`w-full h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-10 gap-5 py-[200px] ${manrope.className}`}
         >
